@@ -10,6 +10,9 @@
   <a href="https://github.com/koromerzhin/userscripts/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
   </a>
+  
+  ![Continuous Integration](https://github.com/koromerzhin/userscripts/workflows/Continuous%20Integration/badge.svg?branch=develop)
+  
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <a href="#-contributors"><img src="https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square" alt="All Contributors" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
