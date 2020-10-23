@@ -22,7 +22,7 @@
 
 </p>
 
-> Template de nouveau repository
+> userscripts
 
 ### 🏠 [Homepage](https://github.com/koromerzhin/userscripts#readme)
 
