@@ -2,7 +2,7 @@ name: Continuous Integration
 on: [push]
 jobs:
   router:
-    name: template-github
+    name: koromerzhin/userscripts
     runs-on: ${{ matrix.operating-system }}
     strategy:
       fail-fast: false
