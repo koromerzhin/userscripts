@@ -25,3 +25,6 @@ git-commit: node_modules ## Commit data
 git-check: node_modules ## CHECK before
 	@make contributors-check -i
 	@git status
+
+linter-readme: node_modules ## linter README.md
+	@npm run linter-markdown README.md
