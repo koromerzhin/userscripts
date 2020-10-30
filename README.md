@@ -1,8 +1,6 @@
- Welcome to @koromerzhin/userscripts 👋
+# Welcome to @koromerzhin/userscripts 👋
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/koromerzhin/userscripts/graphs/commit-activity)
 
@@ -10,10 +8,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-  
 ![Continuous Integration](https://github.com/koromerzhin/userscripts/workflows/Continuous%20Integration/badge.svg?branch=develop)
-
-</p>
 
 > userscripts
 
@@ -42,6 +37,12 @@ make git-check
 
 ```sh
 make git-commit
+```
+
+## Help
+
+```sh
+make help
 ```
 
 ## Author
