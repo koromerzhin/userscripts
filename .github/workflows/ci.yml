@@ -1,7 +1,7 @@
 name: Continuous Integration
 on: [push]
 jobs:
-  stats:
+  tests:
     runs-on: ${{ matrix.operating-system }}
     strategy:
       fail-fast: false
