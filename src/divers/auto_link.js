@@ -9,14 +9,14 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
-'use strict';
-var links = document.getElementsByTagName("a");
-var total = links.length;
-for (var i = 0; i < total; i++) {
-  console.log(links[i].href);
-  if (links[i].href.indexOf("packagist.org") == -1) {
-    links[i].setAttribute('target', '_blank');
+(function () {
+  "use strict";
+  var links = document.getElementsByTagName("a");
+  var total = links.length;
+  for (var i = 0; i < total; i++) {
+    console.log(links[i].href);
+    if (links[i].href.indexOf("packagist.org") == -1) {
+      links[i].setAttribute("target", "_blank");
+    }
   }
-}
 })();
