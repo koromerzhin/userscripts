@@ -2,8 +2,7 @@
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/koromerzhin/userscripts/graphs/commit-activity)
-![Continuous Integration](https://github.com/koromerzhin/userscripts/workflows/Continuous%20Integration/badge.svg?branch=develop)
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+![Continuous Integration](https://github.com/koromerzhin/userscripts/workflows/Continuous%20Integration/badge.svg?branch=develop)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
