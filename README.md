@@ -9,7 +9,9 @@
 ## 🏠 [Homepage](https://github.com/koromerzhin/userscripts#readme)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#-contributors)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Need
@@ -55,8 +57,8 @@ make help
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome! Feel free to check
-[issues page](https://github.com/koromerzhin/userscripts/issues).
-You can also take a look at the
+[issues page](https://github.com/koromerzhin/userscripts/issues). You can also
+take a look at the
 [contributing guide](https://github.com/koromerzhin/userscripts/blob/develop/CONTRIBUTING.md).
 
 ## Show your support
