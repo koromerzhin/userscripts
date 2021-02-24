@@ -34,9 +34,7 @@ endif
 
 .PHONY: git
 git: node_modules ## Scripts GIT
-ifeq ($(COMMAND_ARGS),commit)
-	@npm run commit
-else ifeq ($(COMMAND_ARGS),check)
+ifeq ($(COMMAND_ARGS),check)
 	@make contributors check -i
 	@make linter all -i
 	@git status
@@ -45,7 +43,6 @@ else
 	@echo "---"
 	@echo "make git ARGUMENT"
 	@echo "---"
-	@echo "commit: Commit data"
 	@echo "check: CHECK before"
 endif
 
