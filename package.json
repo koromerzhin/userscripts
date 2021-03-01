@@ -28,7 +28,7 @@
     "readme-md-generator": "1.0.0"
   },
   "devDependencies": {
-    "generate-changelog": "^1.8.0",
-    "jscpd": "^3.3.24"
+    "generate-changelog": "1.8.0",
+    "jscpd": "3.3.24"
   }
 }
