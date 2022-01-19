@@ -17,6 +17,9 @@ ifeq ($(COMMAND_ARGS),all)
 else ifeq ($(COMMAND_ARGS),readme)
 	@npm run linter-markdown README.md
 else
-	@printf "${MISSING_ARGUMENTS}" linter
-	@printf "${NEED}" "readme" "linter README.md"
+	@printf "${MISSING_ARGUMENTS}" "linter"
+	$(call array_arguments, \
+		["all"]="Launch all linter" \
+		["readme"]="linter README.md" \
+	)
 endif
