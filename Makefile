@@ -12,9 +12,9 @@ install: node_modules ## Installation application
 
 .PHONY: linter
 linter: node_modules ### Scripts Linter
-ifeq ($(COMMAND_ARGS),all)
+ifeq ($(COMMANDS_ARGS),all)
 	@make linter readme -i
-else ifeq ($(COMMAND_ARGS),readme)
+else ifeq ($(COMMANDS_ARGS),readme)
 	@npm run linter-markdown README.md
 else
 	@printf "${MISSING_ARGUMENTS}" "linter"
