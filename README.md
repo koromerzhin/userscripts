@@ -19,6 +19,14 @@ Software:
 - make
 - npm
 
+## Download
+
+```sh
+git clone git@github.com:koromerzhin/userscripts.git userscripts
+cd userscripts
+git submodule update --init
+```
+
 ## Install
 
 ```sh
