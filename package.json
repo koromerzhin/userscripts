@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/koromerzhin/userscripts#readme",
   "dependencies": {
-    "korojscommands": "^1.2.8"
+    "korojscommands": "^1.2.10"
   }
 }
