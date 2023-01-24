@@ -3,12 +3,7 @@
   "version": "1.0.0",
   "description": "userscripts",
   "scripts": {
-    "linter-markdown": "markdownlint",
-    "contributors": "all-contributors",
-    "readme": "readme",
-    "licenses": "license-checker",
-    "changelog": "changelog",
-    "jscpd": "jscpd src"
+    "lint:markdown": "markdownlint README.md"
   },
   "repository": {
     "type": "git",
@@ -22,6 +17,6 @@
   },
   "homepage": "https://github.com/koromerzhin/userscripts#readme",
   "dependencies": {
-    "koromerzhin-dependencies": "1.3.0"
+    "korojscommands": "^1.2.8"
   }
 }
