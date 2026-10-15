@@ -1,22 +1,29 @@
 {
   "name": "@koromerzhin/userscripts",
   "version": "1.0.0",
-  "description": "userscripts",
+  "description": "Collection de userscripts Tampermonkey/Violentmonkey (CCM Benchmark + divers).",
   "scripts": {
-    "lint:markdown": "markdownlint README.md"
+    "lint": "npm run lint:js && npm run lint:markdown",
+    "lint:js": "eslint src/**/*.js",
+    "lint:markdown": "markdownlint README.md CONTRIBUTING.md SECURITY.md"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/koromerzhin/userscripts.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "userscript",
+    "tampermonkey",
+    "violentmonkey"
+  ],
+  "author": "koromerzhin",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/koromerzhin/userscripts/issues"
   },
   "homepage": "https://github.com/koromerzhin/userscripts#readme",
-  "dependencies": {
-    "korojscommands": "^1.2.11"
+  "devDependencies": {
+    "eslint": "^9.18.0",
+    "markdownlint-cli": "^0.44.0"
   }
 }

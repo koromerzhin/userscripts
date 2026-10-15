@@ -1,51 +1,62 @@
-# Welcome to @koromerzhin/userscripts 👋
+# Welcome to @koromerzhin/userscripts
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/koromerzhin/userscripts/graphs/commit-activity)
 ![Continuous Integration](https://github.com/koromerzhin/userscripts/workflows/ci/badge.svg?branch=develop)
 
-> userscripts
+> Collection de userscripts Tampermonkey / Violentmonkey pour automatiser des tâches web.
 
-## 🏠 [Homepage](https://github.com/koromerzhin/userscripts#readme)
+## Prérequis
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+- Une extension userscript : [Tampermonkey](https://www.tampermonkey.net/) ou [Violentmonkey](https://violentmonkey.github.io/)
+- `npm` (uniquement pour contribuer / linter)
 
-## Need
+## Installation (1-clic)
 
-Software:
+Clique sur le lien `raw` correspondant, l'extension proposera l'installation.
+Les mises à jour sont automatiques via `@downloadURL` / `@updateURL`.
 
-- npm
+### CCM Benchmark
 
-## Download
+| Script | Rôle | `@match` | Installer |
+|--------|------|----------|-----------|
+| `auto_link-atlassian.js` | Ouvre les liens externes Atlassian en `_blank` + `noopener` | `ccmbenchmark.atlassian.net/*` | [Installer](https://raw.githubusercontent.com/koromerzhin/userscripts/main/src/ccmbenchmark/auto_link-atlassian.js) |
+| `changeurl-local.js` | Réécrit les URLs prod vers `.local` (via `URL` API + `MutationObserver`) | `*.local.journaldesfemmes.fr`, `*.local.journaldunet.com`, `*.local.hugolescargot.com`, `*.local.linternaute.com` | [Installer](https://raw.githubusercontent.com/koromerzhin/userscripts/main/src/ccmbenchmark/changeurl-local.js) |
+| `changeurl-qlf.js` | Réécrit les URLs prod vers `.qlf` (via `URL` API + `MutationObserver`) | `*.qlf.journaldesfemmes.fr`, `*.qlf.journaldunet.*`, `*.qlf.hugolescargot.com`, `*.qlf.linternaute.com` | [Installer](https://raw.githubusercontent.com/koromerzhin/userscripts/main/src/ccmbenchmark/changeurl-qlf.js) |
+
+### Divers
+
+| Script | Rôle | `@match` | Installer |
+|--------|------|----------|-----------|
+| `auto_link.js` | Ouvre les liens externes Packagist en `_blank` + `noopener` | `packagist.org/*` | [Installer](https://raw.githubusercontent.com/koromerzhin/userscripts/main/src/divers/auto_link.js) |
+| `facebook-poke-french.js` | Auto-poke Facebook FR (DEPRECATED, sélecteurs FB instables) | `facebook.com/pokes/*` | [Installer](https://raw.githubusercontent.com/koromerzhin/userscripts/main/src/divers/facebook-poke-french.js) |
+
+## Développement
 
 ```sh
-git clone --recurse-submodules git@github.com:koromerzhin/userscripts.git userscripts
+git clone git@github.com:koromerzhin/userscripts.git userscripts
 cd userscripts
+npm ci
+npm run lint
 ```
 
-## Install
+Conventions userscript :
 
-```sh
-npm install
-```
+- IIFE + `'use strict'` obligatoire (pas de fuite globale)
+- Pas de `setInterval` persistant : préférer `MutationObserver` + `disconnect()` sur `unload`
+- Réécriture URL via `new URL()`, jamais `String.replace` sur hostname
+- Headers requis : `@name`, `@namespace`, `@version` (alignée sur `package.json`), `@description` réelle, `@match`, `@downloadURL`, `@updateURL`, `@run-at document-idle`
 
-## Author
+Voir [CONTRIBUTING.md](./CONTRIBUTING.md) et [SECURITY.md](./SECURITY.md).
 
-👤 **koromerzhin**
+## 🏠 Homepage
 
-- Website: [https://www.letoullec.fr](https://www.letoullec.fr)
-- Twitter: [@koromerzhin](https://twitter.com/koromerzhin)
-- Github: [@koromerzhin](https://github.com/koromerzhin)
-- LinkedIn: [@koromerzhin](https://linkedin.com/in/koromerzhin)
+[https://github.com/koromerzhin/userscripts#readme](https://github.com/koromerzhin/userscripts#readme)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome! Feel free to check
-[issues page](https://github.com/koromerzhin/userscripts/issues).
-You can also take a look at the
-[contributing guide](https://github.com/koromerzhin/userscripts/blob/develop/CONTRIBUTING.md).
+Contributions, issues et feature requests bienvenues.
+Voir [issues](https://github.com/koromerzhin/userscripts/issues) et [contributing guide](./CONTRIBUTING.md).
 
 ## Show your support
 
@@ -55,39 +66,4 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2019 [koromerzhin](https://github.com/koromerzhin).
 
-This project is
-[MIT](https://github.com/koromerzhin/userscripts/blob/develop/LICENSE) licensed.
-
-## ✨ Contributors
-
-Thanks goes to these wonderful people
-([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/koromerzhin"><img src="https://avatars0.githubusercontent.com/u/308012?v=4" width="100px;" alt=""/><br /><sub><b>Le TOULLEC Martial</b></sub></a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://www.mend.io/free-developer-tools/renovate/"><img src="https://avatars.githubusercontent.com/u/25180681?v=4" width="100px;" alt=""/><br /><sub><b>Mend Renovate</b></sub></a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://restyled.io/"><img src="https://avatars.githubusercontent.com/u/65077583?v=4" width="100px;" alt=""/><br /><sub><b>Restyled Commits</b></sub></a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/apps/mend-bolt-for-github"><img src="https://avatars.githubusercontent.com/in/16809?v=4" width="100px;" alt=""/><br /><sub><b>mend-bolt-for-github[bot]</b></sub></a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/apps/dependabot"><img src="https://avatars.githubusercontent.com/in/29110?v=4" width="100px;" alt=""/><br /><sub><b>dependabot[bot]</b></sub></a></td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the
-[all-contributors](https://github.com/all-contributors/all-contributors)
-specification. Contributions of any kind welcome!
-
----
-
-_This README was generated with ❤️ by
-[readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+This project is [MIT](https://github.com/koromerzhin/userscripts/blob/develop/LICENSE) licensed.

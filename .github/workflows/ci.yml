@@ -1,18 +1,25 @@
 name: ci
-on: [push]
+on: [push, pull_request]
 jobs:
   tests:
-    runs-on: ${{ matrix.operating-system }}
+    runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
-        operating-system: [ubuntu-22.04]
+        node-version: [18, 20, 22]
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
         with:
-          submodules: recursive
+          node-version: ${{ matrix.node-version }}
+          cache: npm
       - name: Install npm dependencies
-        run: npm install
-      - name: linter readme.md
+        run: npm ci
+      - name: Audit dependencies (prod only)
+        run: npm audit --omit=dev --audit-level=high
+      - name: Lint JS
+        run: npm run lint:js
+      - name: Lint Markdown
         run: npm run lint:markdown
