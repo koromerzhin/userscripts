@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/koromerzhin/userscripts#readme",
   "devDependencies": {
-    "eslint": "^9.18.0",
+    "eslint": "^10.13.0",
     "markdownlint-cli": "^0.44.0"
   }
 }
